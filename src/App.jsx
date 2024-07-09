@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Brands from './components/Brands'
@@ -12,8 +11,6 @@ import Footer from './components/Footer'
 import BacktoTopBtn from './components/BacktoTopBtn'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
       <Header />

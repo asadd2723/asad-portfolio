@@ -6,6 +6,18 @@
     <title>Asad's Portfolio</title>
   </head>
   <body>
+    <noscript>
+      <form name='contact-us' className='space-y-8 w-full max-w-[780px]' method='POST'  data-netlify="true">
+        <input type="hidden" name="form-name" value="contact-us"/>
+        <div className='flex gap-8'>
+          <input className='input' type="text" placeholder='Enter your name' name='contact-us'/>
+          <input className='input' type="email"placeholder='Enter your email'  />
+        </div>
+        <input type="text" placeholder='Subject' className="input" />
+        <textarea className='textarea' placeholder='Enter your Message'></textarea>
+        <button type='submit' className='btn btn-lg bg-accent hover:bg-accent-hover '>Send Message</button>
+      </form>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -25,7 +25,7 @@ function Contact() {
             })}
           </div>
           {/* Form */}
-          <form className='space-y-8 w-full max-w-[780px]' method="POST" data-netlify="true">
+          <form className='space-y-8 w-full max-w-[780px]' action='post' data-netlify="true">
             <div className='flex gap-8'>
               <input className='input' type="text" placeholder='Enter your name'/>
               <input className='input' type="email"placeholder='Enter your email'  />

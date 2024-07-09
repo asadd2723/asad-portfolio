@@ -31,7 +31,7 @@ function Contact() {
               <input className='input' type="text" placeholder='Enter your name' name='contact-us'/>
               <input className='input' type="email" placeholder='Enter your email' name='contact-us' />
             </div>
-            <input type="text" placeholder='Subject' className="input" />
+            <input type="text" placeholder='Subject' className="input" name='contact-us'/>
             <textarea className='textarea' placeholder='Enter your Message' name='contact-us'></textarea>
             <button type='submit' className='btn btn-lg bg-accent hover:bg-accent-hover '>Send Message</button>
           </form>

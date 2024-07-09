@@ -11,10 +11,10 @@ function Services() {
         </div>
         <div className='grid lg:grid-cols-4 gap-8 '>
           {services.map((item,index)=>{
-            const {icon, name, description} = item
+            const {name, description} = item
             return <div key={index} className='bg-secondary p-6 rounded-2xl'>
                 <div className='text-accent rounded-sm w-12 h-12 flex items-center justify-center mb-24 text-[28px]'>
-                  {icon}
+                  {<item.icon/>}
                 </div>
                 <h4 className='text-xl font-medium mb-2 '>{name}</h4>
                 <p>{description}</p>

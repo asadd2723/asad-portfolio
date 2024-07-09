@@ -6,6 +6,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 import Portfolio from './components/Portfolio'
 import Services from './components/Services'
+import Testimonials from './components/Testimonials'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
       <Skills />
       <Portfolio />
       <Services />
+      <Testimonials />
     </div>
   )
 }

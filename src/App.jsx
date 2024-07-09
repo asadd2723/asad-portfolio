@@ -8,6 +8,8 @@ import Portfolio from './components/Portfolio'
 import Services from './components/Services'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
+import BacktoTopBtn from './components/BacktoTopBtn'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +25,8 @@ function App() {
       <Services />
       <Testimonials />
       <Contact />
+      <Footer />
+      <BacktoTopBtn />
     </div>
   )
 }

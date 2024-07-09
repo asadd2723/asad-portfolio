@@ -26,13 +26,13 @@ function Contact() {
           </div>
           {/* Form */}
           <form name='contact-us' className='space-y-8 w-full max-w-[780px]' method='POST'  data-netlify="true">
-            <input type="hidden" name="form-name" value="contact-us"/>
+            <input type="hidden" name="form-name" value="contact-us" />
             <div className='flex gap-8'>
               <input className='input' type="text" placeholder='Enter your name' name='contact-us'/>
-              <input className='input' type="email"placeholder='Enter your email'  />
+              <input className='input' type="email" placeholder='Enter your email' name='contact-us' />
             </div>
             <input type="text" placeholder='Subject' className="input" />
-            <textarea className='textarea' placeholder='Enter your Message'></textarea>
+            <textarea className='textarea' placeholder='Enter your Message' name='contact-us'></textarea>
             <button type='submit' className='btn btn-lg bg-accent hover:bg-accent-hover '>Send Message</button>
           </form>
         </div>

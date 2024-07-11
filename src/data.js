@@ -73,7 +73,7 @@ export const navigation = [
 export const social = [
   {
     icon: FiLinkedin,
-    href: '',
+    href: 'https://www.linkedin.com/in/asadd2723/',
   },
   {
     icon: FiInstagram,

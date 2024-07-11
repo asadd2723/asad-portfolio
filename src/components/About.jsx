@@ -4,6 +4,7 @@ import PopupContact from './PopupContact'
 
 function About() {
   const [showPopUp, setShowPopUp] = useState(false)
+  
   return (
     <section id='about' className='section bg-secondary'>
       <div className="container mx-auto">

@@ -1,6 +1,5 @@
 import React from 'react'
 import WomanImg from '../assets/img/banner-woman2.webp'
-import { Link } from 'react-scroll'
 import { LiaLinkedin } from 'react-icons/lia'
 function Hero() {
   return (

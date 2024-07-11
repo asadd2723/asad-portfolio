@@ -10,8 +10,8 @@ function PopupContact({change}) {
         <div className='bg-primary rounded-xl py-8 px-6 md:py-10 md:px-8 text-center'>
           <h1 className='text-2xl md:text-3xl font-semibold outline outline-1 outline-accent'>Click here to Subscribe!</h1>
           <p className=' my-4 text-lg md:text-xl  text-accent'>Let's connect for more project and work</p>
-          <form name='PopUp-Contact-Us' className='space-y-5 w-full max-w-[780px]' method='POST'  data-netlify="true" >
-            <input type="hidden" name="form-name" value="PopUp-Contact-Us" />
+          <form name='contact-us' className='space-y-5 w-full max-w-[780px]' method='POST'  data-netlify="true" >
+            <input type="hidden" name="form-name" value="contact-us" />
             <div className='flex gap-4'>
               <input className='rounded-lg input ' type="text" placeholder='Enter your name' name='Name' required/>
               <input className='rounded-lg input' type="email" placeholder='Enter your email' name='Email' required/>

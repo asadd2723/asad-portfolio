@@ -1,9 +1,8 @@
 //  icons
 import {
-  FiYoutube,
+  FiLinkedin,
   FiInstagram,
   FiGithub,
-  FiDribbble,
   FiLayout,
   FiSettings,
   FiPenTool,
@@ -73,7 +72,7 @@ export const navigation = [
 // social
 export const social = [
   {
-    icon: FiYoutube,
+    icon: FiLinkedin,
     href: '',
   },
   {
@@ -83,10 +82,6 @@ export const social = [
   {
     icon: FiGithub,
     href: 'https://github.com/asadd2723/',
-  },
-  {
-    icon: FiDribbble,
-    href: '',
   },
 ];
 

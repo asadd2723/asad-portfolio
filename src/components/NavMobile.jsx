@@ -48,7 +48,7 @@ function NavMobile() {
         {
           navigation.map((item, index)=>(
             <li className='mb-8' key={index}>
-              <Link to={item.href} smooth={true} duration={500} offset={-70} className='text-xl cursor-pointer capitalize'>{item.name}</Link>
+              <Link to={item.href} smooth={true} onClick={()=>setIsOpen(false)} duration={500} offset={-70} className='text-xl cursor-pointer capitalize'>{item.name}</Link>
             </li>
           ))
         }

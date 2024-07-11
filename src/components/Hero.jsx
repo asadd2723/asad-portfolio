@@ -1,5 +1,7 @@
 import React from 'react'
 import WomanImg from '../assets/img/banner-woman2.webp'
+import { Link } from 'react-scroll'
+import { LiaLinkedin } from 'react-icons/lia'
 function Hero() {
   return (
     <section id='home' className='lg:h-[85vh] flex items-center bg-primary lg:bg-cover lg:bg-center lg:bg-no-repeat py-32 lg:py-0 overflow-hidden'>
@@ -11,7 +13,12 @@ function Hero() {
               I Build & Design <br /> Web Interfaces
             </h1>
             <p className='pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-center text-lg lg:text-left'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio voluptatem unde ea voluptates,</p>
-            <button className='btn btn-md bg-accent hover:bg-accent-hover md:btn-lg transition-all'>Work with me</button>
+            <a href="https://www.linkedin.com/in/asadd2723/" target="_blank" rel="noopener noreferrer">
+            <button className='btn btn-md bg-accent text-xl hover:bg-accent-hover md:btn-lg transition-all cursor-pointer'>
+              <span>Connect on Linkedin</span> 
+              <LiaLinkedin size={35} className='text-secondary' />
+            </button>
+            </a>
           </div>
           <div className="hidden lg:flex flex-1 justify-end items-end h-full">
             <img src={WomanImg} alt="" />

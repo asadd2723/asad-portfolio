@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from '../assets/img/about.webp'
+import PopupContact from './PopupContact'
+
 function About() {
+  const [showPopUp, setShowPopUp] = useState(false)
   return (
     <section id='about' className='section bg-secondary'>
       <div className="container mx-auto">
@@ -17,10 +20,11 @@ function About() {
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, soluta?
               </p>
             </div>
-            <button className='btn btn-md bg-accent hover:bg-accent-hover transition-all'>Contact Me</button>
+            <button onClick={()=>setShowPopUp(true)} className='btn btn-md bg-accent hover:bg-accent-hover transition-all cursor-pointer'>Contact Me</button>
           </div>
         </div>
       </div>
+      {showPopUp && <PopupContact change={()=>setShowPopUp(false)} />}
     </section>
   )
 }

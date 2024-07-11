@@ -3,6 +3,8 @@ import Logo from '../assets/img/logo.svg'
 import Nav from './Nav'
 import NavMobile from './NavMobile'
 import Socials from './Socials'
+import { Link } from 'react-scroll'
+
 
 function Header() {
   const [bg, setBg] = useState(false);
@@ -16,9 +18,15 @@ function Header() {
   return (
     <header className={`${bg ? "bg-tertiary h-20": "h-24"} flex items-center fixed top-0 w-full text-white transition-all duration-300 z-10`}>
       <div className="container mx-auto h-full flex items-center justify-between">
-        <a className='text-2xl' href="">
+        <Link
+        activeClass='active' 
+        spy={true} 
+        smooth={true} 
+        duration={500} 
+        offset={-70} 
+        className='transition-all duration-300 text-2xl cursor-pointer' to='home'>
           <img src={Logo} alt="" />
-        </a>
+        </Link>
         <div className='hidden lg:block'>
           <Nav />
         </div>

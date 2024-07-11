@@ -78,7 +78,7 @@ export const social = [
   },
   {
     icon: FiInstagram,
-    href: '',
+    href: 'https://www.instagram.com/asadd2723',
   },
   {
     icon: FiGithub,
@@ -257,12 +257,12 @@ export const contact = [
     icon: FiMail,
     title: 'Have a question?',
     subtitle: 'I am here to help you.',
-    description: 'Email me at hello@youremail.com',
+    description: 'Email me at pkprogrammer1@gmail.com',
   },
   {
     icon: FiMapPin,
     title: 'Current Location',
-    subtitle: 'Bucharest, Romania',
+    subtitle: 'Rawalpindi, Pakistan',
     description: 'Serving clients worldwide',
   },
 ];

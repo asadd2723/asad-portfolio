@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { MdCancel } from 'react-icons/md'
 import Thank from './Thank';
+import { motion } from 'framer-motion';
 
 function PopupContact({change}) {
   const [submitted, setSubmitted] = useState(false);
@@ -22,8 +23,16 @@ function PopupContact({change}) {
   }
   
   return (
-     <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10'>
-      <div className='flex w-[90%] sm:w-auto flex-col gap-1  text-white'>
+     <div className=' bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10'>
+      <motion.div
+      initial={{opacity:0}} 
+  animate={{
+    opacity: 1,
+    transition: {
+      duration:0.4,
+      ease:"easeOut"
+    }}} 
+    className='flex w-[90%] sm:w-auto flex-col gap-1 transition-all duration-500 text-white'>
         <button onClick={change} className=' rounded-full place-self-end'><MdCancel size={35}  /></button>
         <div className='bg-primary rounded-xl py-8 px-6 md:py-10 md:px-8 text-center'>
           <h1 className='text-2xl md:text-3xl font-semibold outline outline-1 outline-accent'>Click here to Subscribe!</h1>
@@ -39,7 +48,7 @@ function PopupContact({change}) {
             <button type='submit' className='rounded-lg btn btn-lg bg-accent hover:bg-accent-hover '>Send Message</button>
           </form>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

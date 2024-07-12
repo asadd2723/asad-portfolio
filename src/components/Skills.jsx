@@ -1,5 +1,6 @@
 import React from 'react'
 import { skills } from '../data'
+import { motion } from 'framer-motion'
 
 function Skills() {
   return (
@@ -8,7 +9,7 @@ function Skills() {
         <div className='grid grid-cols-8 md:grid-flow-row'>
           {skills.map((item, index)=>(
             <div className='flex items-center justify-center' key={index}>
-              <img src={item.image} alt="" />
+              <img className='overflow-x-hidden' src={item.image} alt="" />
             </div>
           ))}
         </div>

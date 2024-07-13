@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { contact } from '../data'
 import Thank from './Thank';
 import { useDispatch, useSelector } from 'react-redux';
+import { submitForm } from '../store/formSlice';
 
 
 function Contact() {
@@ -33,7 +34,7 @@ function Contact() {
   };
 
   if (isSubmitted) {
-    return <Thank change={()=>setSubmitted(false)} />;
+    return <Thank />;
   }
 
 

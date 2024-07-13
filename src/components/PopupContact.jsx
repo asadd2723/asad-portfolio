@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { popForm, submitForm } from '../store/formSlice';
 
 function PopupContact() {
-  const selector = useSelector(state=>state.form.popform)
+  const {isSubmitting, popform} = useSelector(state=>state.form)
   const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
@@ -17,9 +17,9 @@ function PopupContact() {
   };
 
 
-  console.log(selector);
+  console.log(popform);
   return (
-     selector && <div className=' bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10'>
+     popform && <div className=' bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10'>
       <motion.div
       initial={{opacity:0}} 
   animate={{
@@ -41,7 +41,7 @@ function PopupContact() {
             </div>
             <input type="text" placeholder='Subject' className="rounded-lg input" name='Subject' required/>
             <textarea className='rounded-lg textarea' placeholder='Enter your Message' name='Message' required></textarea>
-            <button type='submit' className='rounded-lg btn btn-lg bg-accent hover:bg-accent-hover '>Send Message</button>
+            <button type='submit' disabled={isSubmitting} className='rounded-lg btn btn-lg bg-accent hover:bg-accent-hover '>Send Message</button>
           </form>
         </div>
       </motion.div>

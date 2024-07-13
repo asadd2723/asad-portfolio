@@ -13,14 +13,14 @@ function Thank() {
     disptach(resetFormState())
   }
   if(isSubmitting){
-    return <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10 '>
+    return <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-20 '>
             <Box sx={{ display: 'flex'  }}>
               <CircularProgress />
             </Box> 
           </div>
   }
   return (
-    isSubmitted && <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-20 '>
+    isSubmitted && <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-30 '>
       <motion.div initial={{opacity:0}} 
       animate={{
         opacity: 1,

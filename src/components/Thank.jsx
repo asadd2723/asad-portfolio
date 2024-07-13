@@ -12,7 +12,7 @@ function Thank() {
     disptach(resetFormState())
   }
   if(isSubmitting){
-    return <h1 className='text-red-950 text-5xl text-center'>Loading</h1>
+    return <h1 className='text-red-950 text-5xl text-center z-10'>Loading</h1>
   }
   return (
     isSubmitted && <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-20 '>

@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Define the initial state
 const initialState = {
-  isSubmitting: true,
+  isSubmitting: false,
   isSubmitted: false,
   error: null,
   popform:false

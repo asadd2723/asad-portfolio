@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { contact } from '../data'
-import Thank from './Thank';
 import { useDispatch, useSelector } from 'react-redux';
 import { submitForm } from '../store/formSlice';
 
@@ -24,7 +23,6 @@ function Contact() {
   //   return <Thank change={()=>setSubmitted(false)} />;
   // }
   const dispatch = useDispatch();
-  const { isSubmitting, isSubmitted, error } = useSelector((state) => state.form);
 
   const handleSubmit = (e) => {
     e.preventDefault();

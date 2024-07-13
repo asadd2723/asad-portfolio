@@ -5,6 +5,7 @@ const initialState = {
   isSubmitting: false,
   isSubmitted: false,
   error: null,
+  popform:false
 };
 
 // Create the async thunk for form submission
@@ -42,6 +43,10 @@ const formSlice = createSlice({
       state.isSubmitted = false;
       state.error = null;
     },
+    popForm:(state,action)=>{
+      state.popform = action.payload
+      console.log(state.popform);
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -62,6 +67,6 @@ const formSlice = createSlice({
   },
 });
 
-export const { resetFormState } = formSlice.actions;
+export const { resetFormState, popForm } = formSlice.actions;
 
 export default formSlice.reducer;

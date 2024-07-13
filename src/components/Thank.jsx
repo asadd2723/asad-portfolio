@@ -7,7 +7,6 @@ import { resetFormState } from '../store/formSlice'
 function Thank() {
   const disptach = useDispatch()
   const { isSubmitting, isSubmitted, error } = useSelector((state) => state.form);
-  console.log(isSubmitted);
   return (
     isSubmitted && <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10 '>
       <motion.div initial={{opacity:0}} 

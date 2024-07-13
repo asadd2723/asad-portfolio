@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import Image from '../assets/img/about.webp'
 import PopupContact from './PopupContact'
+import { useDispatch } from 'react-redux'
+import { popForm } from '../store/formSlice'
 
 function About() {
-  const [showPopUp, setShowPopUp] = useState(false)
-  
+  const dispatch = useDispatch()
   return (
     <section id='about' className='section bg-secondary'>
       <div className="container mx-auto">
@@ -21,11 +22,10 @@ function About() {
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, soluta?
               </p>
             </div>
-            <button onClick={()=>setShowPopUp(true)} className='btn btn-md bg-accent hover:bg-accent-hover transition-all cursor-pointer'>Contact Me</button>
+            <button onClick={()=>dispatch(popForm(true))} className='btn btn-md bg-accent hover:bg-accent-hover transition-all cursor-pointer'>Contact Me</button>
           </div>
         </div>
       </div>
-      {showPopUp && <PopupContact change={()=>setShowPopUp(false)} />}
     </section>
   )
 }

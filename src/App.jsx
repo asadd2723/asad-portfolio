@@ -27,6 +27,7 @@ function App() {
       <Footer />
       <BacktoTopBtn />
       <Thank />
+      <PopupContact />
     </div>
   )
 }

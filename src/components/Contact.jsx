@@ -63,7 +63,7 @@ function Contact() {
             </div>
             <input type="text" placeholder='Subject' className="rounded-lg input" name='Subject' required/>
             <textarea className='rounded-lg textarea' placeholder='Enter your Message' name='Message' required></textarea>
-            <button type='submit' className='rounded-lg btn btn-lg bg-accent hover:bg-accent-hover '>Send Message</button>
+            <button type='submit' className='rounded-lg btn btn-lg bg-accent hover:bg-accent-hover'>Send Message</button>
           </form>
         </div>
       </div>

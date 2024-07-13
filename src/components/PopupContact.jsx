@@ -1,29 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { MdCancel } from 'react-icons/md'
-import Thank from './Thank';
-import { motion } from 'framer-motion';
 
-function PopupContact({change}) {
-  const [submitted, setSubmitted] = useState(false);
+import { motion } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
+import { popForm, submitForm } from '../store/formSlice';
+
+function PopupContact() {
+  const selector = useSelector(state=>state.form.popform)
+  const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString(),
-    })
-      .then(() => setSubmitted(true))
-      .catch((error) => alert(error));
+    const formData = new FormData(form);
+    dispatch(submitForm(formData));
   };
 
-  if (submitted) {
-    return <Thank  change={()=>setSubmitted(false)} />;
-  }
-  
+
+  console.log(selector);
   return (
-     <div className=' bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10'>
+     selector && <div className=' bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10'>
       <motion.div
       initial={{opacity:0}} 
   animate={{
@@ -33,11 +29,11 @@ function PopupContact({change}) {
       ease:"easeOut"
     }}} 
     className='flex w-[90%] sm:w-auto flex-col gap-1 transition-all duration-500 text-white'>
-        <button onClick={change} className=' rounded-full place-self-end'><MdCancel size={35}  /></button>
+        <button onClick={()=>dispatch(popForm(false))} className=' rounded-full place-self-end'><MdCancel size={35}  /></button>
         <div className='bg-primary rounded-xl py-8 px-6 md:py-10 md:px-8 text-center'>
           <h1 className='text-2xl md:text-3xl font-semibold outline outline-1 outline-accent'>Click here to Subscribe!</h1>
           <p className=' my-4 text-lg md:text-xl  text-accent'>Let's connect for more project and work</p>
-          <form onSubmit={handleSubmit} name='contact-us' className='space-y-5 w-full max-w-[780px]' method='POST'  data-netlify="true" >
+          <form name='contact-us' className='space-y-5 w-full max-w-[780px]' method='POST' onSubmit={handleSubmit} data-netlify="true" >
             <input type="hidden" name="form-name" value="contact-us" />
             <div className='flex gap-4'>
               <input className='rounded-lg input ' type="text" placeholder='Enter your name' name='Name' required/>

@@ -1,26 +1,42 @@
 import React, { useState } from 'react'
 import { contact } from '../data'
 import Thank from './Thank';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const form = e.target;
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: new URLSearchParams(new FormData(form)).toString(),
+  //   })
+  //     .then(() => setSubmitted(true))
+  //     .catch((error) => alert(error));
+  // };
+
+  // if (submitted) {
+  //   return <Thank change={()=>setSubmitted(false)} />;
+  // }
+  const dispatch = useDispatch();
+  const { isSubmitting, isSubmitted, error } = useSelector((state) => state.form);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString(),
-    })
-      .then(() => setSubmitted(true))
-      .catch((error) => alert(error));
+    const formData = new FormData(form);
+    dispatch(submitForm(formData));
   };
 
-  if (submitted) {
+  if (isSubmitted) {
     return <Thank change={()=>setSubmitted(false)} />;
   }
+
+
   
   return (
     <section id='contact' className='section bg-primary '>

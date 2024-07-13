@@ -28,7 +28,7 @@ function Contact() {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    dispatch(submitForm(formData));
+    dispatch(submitForm(formData)).then(()=>form.rest());
   };
 
   

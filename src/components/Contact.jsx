@@ -23,7 +23,7 @@ function Contact() {
   //   return <Thank change={()=>setSubmitted(false)} />;
   // }
   const dispatch = useDispatch();
-
+  const {isSubmitting} = useSelector(state=>state.form)
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -63,7 +63,7 @@ function Contact() {
             </div>
             <input type="text" placeholder='Subject' className="rounded-lg input" name='Subject' required/>
             <textarea className='rounded-lg textarea' placeholder='Enter your Message' name='Message' required></textarea>
-            <button type='submit' className='rounded-lg btn btn-lg bg-accent hover:bg-accent-hover'>Send Message</button>
+            <button type='submit' disabled={isSubmitting} className='rounded-lg btn btn-lg bg-accent hover:bg-accent-hover'>Send Message</button>
           </form>
         </div>
       </div>

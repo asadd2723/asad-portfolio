@@ -10,6 +10,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import BacktoTopBtn from './components/BacktoTopBtn'
 import PopupContact from './components/PopupContact'
+import Thank from './components/Thank'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Contact />
       <Footer />
       <BacktoTopBtn />
+      <Thank />
     </div>
   )
 }

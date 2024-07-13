@@ -42,7 +42,7 @@ const formSlice = createSlice({
       state.isSubmitting = false;
       state.isSubmitted = false;
       state.error = null;
-      state.popform = false
+      state.popform = false;
     },
     popForm:(state,action)=>{
       state.popform = action.payload

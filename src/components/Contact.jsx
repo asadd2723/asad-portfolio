@@ -33,11 +33,6 @@ function Contact() {
     dispatch(submitForm(formData));
   };
 
-  if (isSubmitted) {
-    return <Thank />;
-  }
-
-
   
   return (
     <section id='contact' className='section bg-primary '>

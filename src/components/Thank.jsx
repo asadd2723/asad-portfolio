@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import { MdCancel } from 'react-icons/md'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { resetFormState } from '../store/formSlice'
 
 function Thank() {
   const disptach = useDispatch()
-
+  const { isSubmitting, isSubmitted, error } = useSelector((state) => state.form);
   return (
-    <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10 '>
+    isSubmitted && <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-10 '>
       <motion.div initial={{opacity:0}} 
       animate={{
         opacity: 1,

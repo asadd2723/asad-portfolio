@@ -11,6 +11,9 @@ function Thank() {
   const changed = ()=>{
     disptach(resetFormState())
   }
+  if(isSubmitting){
+    return <h1 className='text-red-950 text-5xl text-center'>Loading</h1>
+  }
   return (
     isSubmitted && <div className='bg-opacity-30  inset-0 backdrop-blur-sm flex justify-center items-center fixed z-20 '>
       <motion.div initial={{opacity:0}} 
